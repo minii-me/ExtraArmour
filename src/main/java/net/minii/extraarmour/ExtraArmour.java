@@ -28,6 +28,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minii.extraarmour.block.ModBlocks;
+import net.minii.extraarmour.item.ModCreativeModeTabs;
 import net.minii.extraarmour.item.ModItems;
 
 import org.slf4j.Logger;
@@ -48,8 +49,7 @@ public class ExtraArmour
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in

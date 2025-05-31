@@ -1,5 +1,7 @@
 {
     "item.miniiextraarmour.waxedpaper": "Waxed Paper",
     
-    "block.miniiextraarmour.waxedpaper_block": "Waxed Paper Block"
+    "block.miniiextraarmour.waxedpaper_block": "Waxed Paper Block",
+
+    "creative_tab.miniiextraarmour.all": "Minii's Extra Armour"
 }

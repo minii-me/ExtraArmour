@@ -27,6 +27,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minii.extraarmour.block.ModBlocks;
+import net.minii.extraarmour.item.ModItems;
+
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -45,6 +48,8 @@ public class ExtraArmour
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in
@@ -64,7 +69,15 @@ public class ExtraArmour
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.WaxedPaper);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.WaxedPaperBlock);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

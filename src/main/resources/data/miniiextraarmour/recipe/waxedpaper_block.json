@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "A": {
+            "item": "miniiextraarmour:waxedpaper"
+        }
+    },
+    "pattern": [
+        "AA",
+        "AA"
+    ],
+    "result": {
+        "id": "miniiextraarmour:waxedpaper_block",
+        "count": 1
+    }
+}

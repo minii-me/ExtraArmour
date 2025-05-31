@@ -50,6 +50,8 @@ public class ExtraArmour
         modEventBus.addListener(this::commonSetup);
 
         ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in
@@ -69,15 +71,7 @@ public class ExtraArmour
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
-        {
-            event.accept(ModItems.WaxedPaper);
-        }
-
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-        {
-            event.accept(ModBlocks.WaxedPaperBlock);
-        }
+        
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

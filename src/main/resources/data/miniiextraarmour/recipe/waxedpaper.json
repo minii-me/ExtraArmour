@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "miniiextraarmour:waxedpaper_block"
+        }
+    ],
+    "result": {
+        "id": "miniiextraarmour:waxedpaper",
+        "count": 4
+    }
+}
